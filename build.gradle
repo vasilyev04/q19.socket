@@ -7,7 +7,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.0.4'
+        classpath 'com.android.tools.build:gradle:8.8.1'
 
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
@@ -32,7 +32,7 @@ allprojects {
         maven { url 'https://jitpack.io' }
     }
 
-    group = 'com.github.zhombie'
+    group = 'com.github.vasilyev04'
     project.ext.version_code = 11
     version = '1.6.0.1'
     project.ext.artifactId = rootProject.ext.projectArtifactId(project)
@@ -64,12 +64,11 @@ subprojects { project ->
     apply plugin: 'kotlin-parcelize'
 
     android {
-        compileSdkVersion 31
-        buildToolsVersion "31.0.0"
+        compileSdkVersion 34
 
         defaultConfig {
             minSdkVersion 23
-            targetSdkVersion 31
+            targetSdkVersion 34
 
             versionCode project.ext.version_code
             versionName project.version
@@ -87,12 +86,12 @@ subprojects { project ->
         }
 
         compileOptions {
-            sourceCompatibility JavaVersion.VERSION_11
-            targetCompatibility JavaVersion.VERSION_11
+            sourceCompatibility JavaVersion.VERSION_17
+            targetCompatibility JavaVersion.VERSION_17
         }
 
         kotlinOptions {
-            jvmTarget = JavaVersion.VERSION_11.toString()
+            jvmTarget = JavaVersion.VERSION_17.toString()
         }
     }
 
@@ -105,11 +104,11 @@ subprojects { project ->
 
                 pom {
                     name = project.name
-                    url = "https://github.com/zhombie/q19.socket"
+                    url = "https://github.com/vasilyev04/q19.socket"
 
                     developers {
                         developer {
-                            name = 'zhombie'
+                            name = 'vasilyev04'
                         }
                     }
                 }

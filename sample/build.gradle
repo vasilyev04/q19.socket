@@ -5,6 +5,7 @@ plugins {
 }
 
 android {
+    namespace = 'kz.q19.socket'
     compileSdkVersion 31
     buildToolsVersion '31.0.0'
 
