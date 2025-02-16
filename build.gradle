@@ -34,7 +34,7 @@ allprojects {
 
     group = 'com.github.vasilyev04'
     project.ext.version_code = 11
-    version = '1.6.0.2'
+    version = '1.6.0.5'
     project.ext.artifactId = rootProject.ext.projectArtifactId(project)
 
     if (project.ext.artifactId != null) {
