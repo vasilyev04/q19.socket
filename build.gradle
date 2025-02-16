@@ -65,6 +65,7 @@ subprojects { project ->
 
     android {
         compileSdkVersion 34
+        namespace = 'kz.q19.socket'
 
         defaultConfig {
             minSdkVersion 23
@@ -125,6 +126,10 @@ subprojects { project ->
 
                 afterEvaluate {
                     artifact "$buildDir/outputs/aar/$project.name-release.aar"
+                }
+
+                tasks.withType(PublishToMavenLocal).configureEach {
+                    dependsOn tasks.named("bundleReleaseAar")
                 }
             }
         }
